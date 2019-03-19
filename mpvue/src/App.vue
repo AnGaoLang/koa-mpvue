@@ -1,6 +1,8 @@
 <script>
+import { get } from './utils/fetch.js'
+// 小程序的入口文件没有html（wxml），所以这里也就没有template。
 export default {
-  created () {
+  async created () {
     // 调用API从本地缓存中获取数据
     /*
      * 平台 api 差异的处理方式:  api 方法统一挂载到 mpvue 名称空间, 平台判断通过 mpvuePlatform 特征字符串
@@ -9,6 +11,7 @@ export default {
      * 百度：mpvue === swan, mpvuePlatform === 'swan'
      * 支付宝(蚂蚁)：mpvue === my, mpvuePlatform === 'my'
      */
+    await get('/weapp/demo');
 
     let logs
     if (mpvuePlatform === 'my') {
