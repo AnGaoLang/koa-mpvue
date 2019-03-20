@@ -22,3 +22,10 @@ export default {
   formatNumber,
   formatTime
 }
+
+export function showToast (text, icon) {
+  wx.showToast({
+    title: text,
+    icon: icon
+  })
+}
