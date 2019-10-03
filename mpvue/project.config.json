@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"miniprogramRoot": "dist/wx/",
-	"compileType": "miniprogram",
+	"compileType": "search",
 	"appid": "wx7c24758d93e906b8",
 	"projectname": "koa%26mpvue",
 	"condition": {
